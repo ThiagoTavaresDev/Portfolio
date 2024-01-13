@@ -1,79 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+  --purple1: #363062;
+  --purple2: #3f327a;
+  --purple3: #474177;
+  --purple4: #5e5697;
+  --purple5: #7c73bd;
+  --purple6: #a197e4;
+  --purple7: #b7aefa;
+  --gray1: rgb(7, 7, 7);
+  --gray2: #242424;
+  --gray3: #3d3c3c;
+  --gray4: #616161;
+  --gray5: #929292;
+  --gray6: #aaaaaa;
+  --gray7: #dadada;
+  --gray8: #fffbfb;
+  --green1: #081c15;
+  --green2: #1b4332;
+  --green3: #2d6a4f;
+  --green4: #40916c;
+  --green5: #52b788;
+  --green6: #74c69d;
+  --green7: #95d5b2;
+  --green8: #b7e4c7;
+  --green9: #d8f3dc;
+  --seasalt: #f8f9faff;
+  --antiflash-white: #e9ecefff;
+  --platinum: #dee2e6ff;
+  --french-gray: #ced4daff;
+  --french-gray-2: #adb5bdff;
+  --slate-gray: #6c757dff;
+  --outer-space: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+  --plus-black: rgb(16, 18, 20);
+}
 
-:root{
-    --purple1: #363062;
-    --purple2: #3f327a;
-    --purple3: #474177;
-    --purple4: #5E5697;
-    --purple5: #7C73BD;
-    --purple6: #A197E4;
-    --purple7: #B7AEFA;
-    --gray1: #000;
-    --gray2: #242424;
-    --gray3: #3d3c3c;
-    --gray4: #616161;
-    --gray5: #929292;
-    --gray6: #AAAAAA;
-    --gray7: #DADADA;
-    --gray8: #FFFBFB;
-    --green1: #081C15;
-    --green2: #1B4332;
-    --green3: #2D6A4F;
-    --green4: #40916C;
-    --green5: #52B788;
-    --green6: #74C69D;
-    --green7: #95D5B2;
-    --green8: #B7E4C7;
-    --green9: #D8F3DC;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
 
+body {
+  background-color: var(--plus-black);
+  width: 100%;
+  height: 200vh;
+  position: relative;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 3rem;
+  background-color: var(--eerie-black);
+  border-bottom: 1px solid var(--green5);
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+
+}
+#title-header {
+  color: var(--green5);
+  letter-spacing: 0.04rem;
+
+}
+.fa-solid{
+    color: var(--green5);
+
+}
+#nav-header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 60px;
+}
+#nav-header ul a {
+  text-decoration: none;
+  color: var(--gray8);
+  font-size: 1.15rem;
+  letter-spacing: 0.04rem;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+#nav-header ul .menu-item:hover {
+  border: 1px solid var(--green5);
+  transition: border, 0.6s;
+}
+.fa-brands:hover {
+  transition: all, 0.6s;
+  transform: scale(1.2);
+  color: var(--green5);
+}
+#burguer{
+    display: none;
+}
+@media screen and (max-width: 1040px) {
+ 
+  #nav-header ul li{
+    display: none;
+    
+  }
+  #burguer{
+    display: block;
+    cursor: pointer;
+    fill: var(--green5);
+ 
+  }
+  
+}
+::-webkit-scrollbar{
+    width: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--green5);
+    border-radius: 1.5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--green7);
+
+}
+::-webkit-scrollbar-track{
+    background-color: var(--plus-black);
+}
+#svg-developer{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+}
+
+#text-main-hero{
+    position: absolute;
+    color: var(--gray8);
+    font-size: 1.5rem;
+    top: 260px;
+    left: 50px;
+    width: 50%;
+    letter-spacing: 0.04rem;
+
+}
+#text-main-hero p{
+    line-height: 2rem;
+    
 
 }
 
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+#text-main-hero .text-green{
+    color: var(--green5);
+}
+#div-btn{
+    margin-top: 12px;
+    display: flex;
+    gap: 20px;
+}
+#div-btn button{
+   font-weight: 700;
+   padding: 0.8rem;
+   font-size: 1.0rem;
+   border: none;
+   border-radius: 5px;
+   color: var(--gray8);
+   background-color: var(--green3);
+   cursor: pointer;
+   box-shadow: 1px 1px 8px var(--green5);
+   letter-spacing: 0.04rem;
+}
+#div-btn button:hover{
+    background-color: var(--green5);
+    transition: background-color, 0.6s;
+
 }
 
-body{
-    background: rgb(71,65,119);
-    background: linear-gradient(114deg, rgba(71,65,119,1) 45%, rgba(54,48,98,1) 86%);
+
+#footer{
+   background-color: var(--gray1);
     width: 100%;
-    height: 100vh;
+    color: var(--gray7);
+    padding: 3.25rem 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0px;   
+    letter-spacing: 0.04rem;
 }
-header{
+#footer-div-contatos{
+    
+    text-align: left;
+    border-right: 8px solid var(--green5);
+    padding-right: 62px;
+}
+#footer-div-contatos p{
+   margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 3rem;
-    background-color: var(--purple2);
+    gap: 10px;
 }
-#title-header{
-    color: var(--green5);
-    letter-spacing: 0.04rem;
-}
-#nav-header ul{
-    list-style-type: none;
-    display: flex;
-    gap: 60px;
+#email{
+    fill: var(--green5);
 
 }
-#nav-header ul a{
-    text-decoration: none;
-    color: var(--gray8);
-    font-size: 1.15rem; 
-    letter-spacing: 0.04rem;
-    border: 1px solid transparent;
-    padding: 4px 8px;
-    border-radius: 2px;
+#whatsapp{
+    fill: var(--green5);
 }
-#nav-header ul .menu-item:hover{
-    border: 1px solid var(--green5);
-    transition: border, 0.4s;
-}
-i:hover{
-    transition: all, 0.04s;
+#footer-div-contatos h1:hover{
     color: var(--green5);
+}
+#footer-div-desenvolvido {
+    border-left: 8px solid var(--green5);
+    padding-left: 62px;
+}
+#footer-div-desenvolvido p{
+    margin-top: 20px;
+}
+#footer-div-desenvolvido p a{
+    color: var(--green5);
+}
+#footer-div-desenvolvido p a:hover{
+    color: var(--gray8);
+}
+#footer-div-desenvolvido:hover{
+    color: var(--green5);
+
+}
+@media screen and (max-width: 765px) {
+    #footer h1{
+        font-size: 1.3rem;
+
+    }
+    #footer p{
+        font-size: 0.9rem;
+    }
+
+}
+@media screen and (max-width: 650px) {
+   
+    #footer h1{
+        font-size: 0.9rem;
+    }
+    #footer p{
+        margin: 0px;
+        font-size: 0.6rem;
+    }
+    #email{
+        display: none;
+    }
+    #whatsapp{
+        display: none;
+    }
+    div p{
+        padding-top: 5px;
+    }
+ 
+   
+
+}
+@media screen and (max-width: 515px) {
+    #title-header{
+        font-size: 1.4rem;
+    }
+    #footer{
+        padding: 1.25rem 3rem;
+
+    }
+    #footer div{
+        border: none;
+        padding: 5px;
+    }
+ 
 }
