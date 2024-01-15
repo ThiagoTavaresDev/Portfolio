@@ -34,3 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
   btnCV.addEventListener("click", () => {
     window.open("assets/CV-THIAGOTAVARES.pdf", "_blank");
   })
+
+  const quizprog = document.querySelector('#quiz-prog')
+
+  quizprog.addEventListener("click", () => {
+    window.open("https://quiz-prog.vercel.app/", "_blank");
+  })
+  
+  const carrinhoCompras = document.querySelector('#carrinho-compras')
+
+  carrinhoCompras.addEventListener("click", () => {
+    window.open("https://projetos-entrevistas-react.vercel.app/", "_blank");
+  })
