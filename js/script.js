@@ -46,3 +46,29 @@ document.addEventListener("DOMContentLoaded", function() {
   carrinhoCompras.addEventListener("click", () => {
     window.open("https://projetos-entrevistas-react.vercel.app/", "_blank");
   })
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('.fade-in');
+
+    function checkVisibility() {
+        elements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            console.log('rect top'+ rect.top)
+            console.log('rect bottom'+ rect.bottom)
+            console.log(window.innerHeight)
+            const isVisible = (rect.top <= window.innerHeight - 260 && rect.bottom >= 0);
+            
+            if (isVisible) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Verifique a visibilidade inicial
+    checkVisibility();
+
+    // Adicione um ouvinte de rolagem
+    window.addEventListener('scroll', checkVisibility);
+});
